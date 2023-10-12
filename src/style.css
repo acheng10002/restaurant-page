@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Young+Serif&display=swap');
+
+/* * {
+    
+} */
+
+html {
+    background-image: url('../src/home_background.png');
+    background-size: cover;
+    background-repeat: no repeat;
+    background-position: center center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 15rem;
+    font-family: 'Young Serif', serif;
+    font-size: 45px;
+}
+
+p {
+    font-family: 'AR One Sans', sans-serif;
+    background-color: white;
+}
