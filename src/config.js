@@ -1,60 +1,33 @@
-let homeHeading = {
-    'heading': "Fuzhou Eats",
-    'icon1': "scallions-left",
-    'icon2': "noodles-right"
+// headings object with three headings/keys, each with a different set of icons
+const headings = {
+    'home': { 'heading': "Fuzhou Eats", 'icon1': "scallions-left", 'icon2': "noodles-right" },
+    'menu': { 'heading': "Food Menu", 'icon1': "dumplings-left",'icon2': "cabbage-right" },
+    'contact': { 'heading': "Contact Info", 'icon1': "noodles-left", 'icon2': "dumplings-right" }
 }
 
-let menuHeading = {
-    'heading': "Menu Items",
-    'icon1': "dumplings-left",
-    'icon2': "cabbage-right"
-}
-
-let contactHeading = {
-    'heading': "Contact Info",
-    'icon1': "noodles-left",
-    'icon2': "dumplings-right"
-}
-
-
-let homeIntro = [
+// home page intro array
+const homeIntro = [
     {
         'image': "./img/fuzhou_map.jpg",
         'alt': "map of china with fuzhou highlighted",
-        'text': "Fuzhou cuisine, hailing from China's Fujian province, emphasizes fresh seafood, mountainous ingredients, and a delicate balance of umami and sweetness. Broths are intricate, often brewed with bone stock and seafood. Soups, stews, and braised dishes showcase its depth, while the use of fermented products enhances complexity and flavor.",
+        'text': "Fuzhou cuisine, hailing from China's Fujian province, emphasizes fresh seafood, mountainous ingredients, and a delicate balance of umami and sweetness. Broths are intricate, often brewed with bone stock and seafood. Soups, stews, and braised dishes showcase its depth, while the use of fermented products enhances complexity and flavor."
     }
 ]
 
-let homeHoursLocation = {
+// default time object to spread into the days
+const defaultHours = { 'open': '9', 'close': '9' };
+
+/* home page object with two cards/keys, one key whose value is an hours info object (overiding the days 
+that differ from the default time object) and the other key whose value is a location info object */
+const homeHoursLocation = {
     'hours': {
-        'sunday': {
-            'open': '9',
-            'close': '4'
-        },
-        'monday': {
-            'open': '9',
-            'close': '9'
-        },
-        'tuesday': {
-            'open': '9',
-            'close': '9'
-        },
-        'wednesday': {
-            'open': '9',
-            'close': '9'
-        },
-        'thursday': {
-            'open': '9',
-            'close': '9'
-        },
-        'friday': {
-            'open': '9',
-            'close': '3'
-        }, 
-        'saturday': {
-            'open': '9',
-            'close': '9'
-        }
+        'sunday': { ...defaultHours, 'close': '4' },
+        'monday': { ...defaultHours },
+        'tuesday': { ...defaultHours },
+        'wednesday': { ...defaultHours },
+        'thursday': { ...defaultHours },
+        'friday': { ...defaultHours, 'close': '3' }, 
+        'saturday': { ...defaultHours }
     },
     'location': {
         'street': "888 Arch St",
@@ -65,7 +38,8 @@ let homeHoursLocation = {
     }
 }
 
-let contactStaff = [
+// contact page array of three staff member objects
+const contactStaff = [
     {
         'name': "Alice Zhu",
         'position': "Back of House Operations",
@@ -92,7 +66,8 @@ let contactStaff = [
     }
 ]
 
-let menuItems = [
+// menu page array of 16 objects, 4 subheadings and 12 menu item
+const menuItems = [
     {
         'item': false,
         'subheading': 'Snacks'
@@ -208,4 +183,4 @@ let menuItems = [
     }
 ]
 
-export { homeHeading, menuHeading, contactHeading, homeIntro, homeHoursLocation, contactStaff, menuItems };
+export { headings, homeIntro, homeHoursLocation, contactStaff, menuItems };
